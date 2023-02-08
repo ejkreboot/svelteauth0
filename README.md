@@ -50,6 +50,12 @@ And point your browser to [http://localhost:5173/](http://localhost:5173/).
 
 You should be able to click "Login" and then sign up and login via the Auth0 interface.
 
+## Known Issues
+
+The expiration time of the identity token is based on the `ID Token Expiration` setting in the application 
+dashboard. This must match your **tenant's** `Require login after` setting (https://manage.auth0.com/dashboard/us/YOUR_AUTHO_DOMAIN/tenant/advanced). If they don't match, your protected routes access may expire before (or after!) your session 
+expires.
+
 ## Key Features
 
 The main layout (`src/routes/+layout.svelte`) uses the auth0 client side SDK to manage logging in and 
