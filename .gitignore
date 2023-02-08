@@ -1,0 +1,5 @@
+node_modules/
+.vscode/
+.svelte-kit/
+package-lock.json
+src/auth_config.js
